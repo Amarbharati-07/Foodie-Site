@@ -1,0 +1,232 @@
+Create a premium restaurant website UI template (static frontend only).
+
+Restaurant Details:
+Name: Shri Krishna Restaurant
+Location: Ambernath, Thane
+Cuisine: South Indian, North Indian, Chinese, Street Food
+Pure Vegetarian Restaurant
+Rating: 3.9★
+Timing: 8:45 AM – 10:45 PM
+Price: ₹400 for two
+Phone: +91 7028684786
+
+Reference Design:
+Visual style, animations, layout inspiration from:
+www.mingschinesecuisine.in
+(Do NOT copy content, only design style)
+
+CORE REQUIREMENT (VERY IMPORTANT):
+👉 MENU MUST BE 100% IMAGE BASED
+👉 EACH CATEGORY MUST HAVE A BANNER IMAGE
+👉 EACH FOOD ITEM MUST HAVE:
+   - Dish Image
+   - Dish Name
+   - Price
+   - Veg Icon
+👉 Card based layout (like premium restaurant websites)
+
+Tech Stack:
+HTML5 + CSS3 + JavaScript
+No backend
+No ordering system
+No payment gateway
+
+Pages Required:
+- Home
+- Menu
+- About
+- Gallery
+- Contact
+
+------------------------------------------------
+HOME PAGE:
+------------------------------------------------
+Hero Section:
+- Full width food background image
+- Restaurant name overlay
+- Tagline: "Pure Veg | South Indian | North Indian | Chinese"
+- Buttons: View Menu | Contact Us
+
+Category Preview Section:
+- Image cards for:
+  Breakfast
+  Pav Bhaji
+  Chinese
+  Paneer
+  South Indian
+  Tandoor
+- Clicking card opens Menu page (scroll to section)
+
+------------------------------------------------
+MENU PAGE (MOST IMPORTANT):
+------------------------------------------------
+Menu should be visually rich with images.
+
+MENU STRUCTURE:
+
+Each category must have:
+1. Full-width banner image with category name
+2. Grid of food cards (image + name + price)
+
+Categories & Items:
+
+BREAKFAST & SNACKS:
+Use food images for:
+Bread Butter, Toast Butter, Bread Butter Jam,
+Chutney Sandwich, Medu Vada Sambhar,
+Idli Sambhar, Batata Vada,
+Sada Dosa, Rava Dosa, Onion Rava Dosa,
+Masala Dosa, Mysore Dosa, Uttapam,
+Poha, Misal Pav, Vada Pav
+
+SANDWICH:
+Chilli Cheese Sandwich
+Corn Cheese Sandwich
+Plain Paneer Sandwich
+Tandoori Paneer Sandwich
+Shri Krishna Club Sandwich
+
+BURGER:
+Classic Veg Burger
+Cheese Burger
+Double Cheese Burger
+Aloo Tikki Burger
+
+PAV BHAJI:
+Pav Bhaji
+Amul Pav Bhaji
+Cheese Pav Bhaji
+Jain Pav Bhaji
+Khada Pav Bhaji
+Paneer Pav Bhaji
+Special Pav Bhaji
+
+SOUPS:
+Veg Clear Soup
+Manchow Soup
+Hot & Sour Soup
+Sweet Corn Soup
+Tomato Soup
+Mushroom Soup
+
+SABZI (PUNJABI DISHES):
+Paneer Butter Masala
+Paneer Lababdar
+Paneer Kadai
+Paneer Handi
+Veg Kolhapuri
+Veg Makhanwala
+Veg Hyderabadi
+Veg Korma
+Veg Jalfrezi
+Mushroom Masala
+Mix Veg
+
+DAL:
+Plain Dal
+Dal Fry
+Butter Dal Fry
+Dal Tadka
+
+RICE & BIRYANI:
+Steam Rice
+Jeera Rice
+Veg Pulao
+Veg Biryani
+Paneer Biryani
+Hyderabadi Biryani
+Curd Rice
+Lemon Rice
+
+PANEER SPECIAL:
+Shahi Paneer
+Paneer Angara
+Paneer Tikka Masala
+Paneer Malvani
+Paneer Kolhapuri
+
+TANDOOR CORNER:
+Paneer Tikka
+Malai Paneer Tikka
+Achari Paneer Tikka
+Mushroom Tikka
+Stuffed Mushroom
+
+CHINESE SNACKS:
+Veg Spring Roll
+Veg Manchurian
+Paneer Chilli
+Paneer 65
+Crispy Veg
+Honey Chilli Potato
+
+NOODLES:
+Veg Hakka Noodles
+Schezwan Noodles
+Singapore Noodles
+Burnt Garlic Noodles
+Paneer Noodles
+
+CHINESE RICE:
+Veg Fried Rice
+Schezwan Rice
+Paneer Fried Rice
+Triple Fried Rice
+Hong Kong Fried Rice
+
+BREADS:
+Roti
+Butter Roti
+Naan
+Butter Naan
+Garlic Naan
+Cheese Naan
+Kulcha
+
+------------------------------------------------
+IMAGE RULES:
+------------------------------------------------
+- Use high quality placeholder food images
+- Use Unsplash / generic food images
+- Consistent card size
+- Hover effect on food cards
+- Lazy loading images
+
+------------------------------------------------
+GALLERY PAGE:
+------------------------------------------------
+- Food gallery grid
+- Restaurant ambience images
+- Lightbox popup on click
+
+------------------------------------------------
+CONTACT PAGE:
+------------------------------------------------
+- Address block
+- Clickable phone number
+- Embedded Google Map (dummy iframe)
+- Contact form (non functional)
+
+------------------------------------------------
+FOOTER:
+------------------------------------------------
+- Restaurant name
+- Address
+- Phone number
+- Opening hours
+- Social icons (dummy)
+
+------------------------------------------------
+DELIVERABLE:
+------------------------------------------------
+Provide:
+- Complete folder structure
+- index.html
+- menu.html
+- about.html
+- gallery.html
+- contact.html
+- style.css
+- script.js
+
+Design must look premium, image-heavy, modern, and visually similar to the reference website, but content must be Shri Krishna Restaurant menu only.
