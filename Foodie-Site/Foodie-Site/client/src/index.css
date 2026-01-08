@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Premium Gold/Amber Theme */
+  --background: 40 20% 98%;      /* Soft cream/off-white */
+  --foreground: 20 10% 20%;      /* Dark brown-grey */
+  
+  --primary: 45 40% 55%;         /* Gold/Bronze */
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 30 15% 94%;       /* Light beige */
+  --secondary-foreground: 20 10% 20%;
+  
+  --muted: 30 15% 94%;
+  --muted-foreground: 25 5% 45%;
+  
+  --accent: 45 40% 55%;
+  --accent-foreground: 0 0% 100%;
+  
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  
+  --border: 30 10% 90%;
+  --input: 30 10% 90%;
+  --ring: 45 40% 55%;
+  
+  --radius: 0.5rem;
+  
+  /* Custom Font Variables */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    @apply tracking-tight font-medium;
+  }
+}
+
+/* Custom Scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--primary) / 0.3);
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--primary) / 0.6);
+}
+
+.text-gold {
+  color: hsl(var(--primary));
+}
+
+.bg-gold {
+  background-color: hsl(var(--primary));
+}
