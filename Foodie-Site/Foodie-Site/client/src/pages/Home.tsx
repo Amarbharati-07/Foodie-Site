@@ -4,11 +4,20 @@ import { ArrowRight, Star, Clock, MapPin, Phone } from "lucide-react";
 import { useCategories } from "../hooks/use-restaurant";
 import { useState, useEffect } from "react";
 
+import image1 from "@/../../attached_assets/stock_images/premium_pure_vegetar_5cc6a273.jpg";
+import image2 from "@/../../attached_assets/stock_images/premium_pure_vegetar_c9164443.jpg";
+import image3 from "@/../../attached_assets/stock_images/premium_pure_vegetar_29858282.jpg";
+import image4 from "@/../../attached_assets/stock_images/premium_pure_vegetar_fefa885a.jpg";
+import image5 from "@/../../attached_assets/stock_images/premium_pure_vegetar_c3be72bb.jpg";
+import image6 from "@/../../attached_assets/stock_images/premium_pure_vegetar_22b9c2ce.jpg";
+import image7 from "@/../../attached_assets/stock_images/premium_pure_vegetar_a8f53f46.jpg";
+import image8 from "@/../../attached_assets/stock_images/premium_pure_vegetar_43c1b98b.jpg";
+import image9 from "@/../../attached_assets/stock_images/premium_pure_vegetar_94f8b597.jpg";
+import image10 from "@/../../attached_assets/stock_images/premium_pure_vegetar_cb008688.jpg";
+
 const HERO_IMAGES = [
-  "https://images.unsplash.com/photo-1517244683847-745431f57235?q=80&w=2000&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1606491956689-2ea28c674675?q=80&w=2000&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=2000&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?q=80&w=2000&auto=format&fit=crop"
+  image1, image2, image3, image4, image5,
+  image6, image7, image8, image9, image10
 ];
 
 export default function Home() {
