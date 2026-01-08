@@ -49,20 +49,20 @@ export class DatabaseStorage implements IStorage {
 
     // Seed Categories
     const catsData = [
-      { name: "Breakfast & Snacks", slug: "breakfast", banner: "https://images.unsplash.com/photo-1593560708920-63984dc86f71?auto=format&fit=crop&q=80" },
+      { name: "Breakfast & Snacks", slug: "breakfast", banner: "/attached_assets/stock_images/breakfast.jpg" },
       { name: "Sandwich", slug: "sandwich", banner: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&q=80" },
       { name: "Burger", slug: "burger", banner: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80" },
-      { name: "Pav Bhaji", slug: "pav-bhaji", banner: "https://images.unsplash.com/photo-1606491956689-2ea28c674675?auto=format&fit=crop&q=80" },
-      { name: "Soups", slug: "soups", banner: "https://images.unsplash.com/photo-1547592166-23acbe3a624b?auto=format&fit=crop&q=80" },
+      { name: "Pav Bhaji", slug: "pav-bhaji", banner: "/attached_assets/stock_images/pav_bhaji.jpg" },
+      { name: "Soups", slug: "soups", banner: "/attached_assets/stock_images/soups.jpg" },
       { name: "Sabzi (Punjabi Dishes)", slug: "sabzi", banner: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80" },
-      { name: "Dal", slug: "dal", banner: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&q=80" },
-      { name: "Rice & Biryani", slug: "rice", banner: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&q=80" },
-      { name: "Paneer Special", slug: "paneer", banner: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&q=80" },
+      { name: "Dal", slug: "dal", banner: "/attached_assets/stock_images/dal.jpg" },
+      { name: "Rice & Biryani", slug: "rice", banner: "/attached_assets/stock_images/rice.jpg" },
+      { name: "Paneer Special", slug: "paneer", banner: "/attached_assets/stock_images/paneer.jpg" },
       { name: "Tandoor Corner", slug: "tandoor", banner: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&q=80" },
-      { name: "Chinese Snacks", slug: "chinese-snacks", banner: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&q=80" },
-      { name: "Noodles", slug: "noodles", banner: "https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&q=80" },
-      { name: "Chinese Rice", slug: "chinese-rice", banner: "https://images.unsplash.com/photo-1538329972958-465d6d2166e3?auto=format&fit=crop&q=80" },
-      { name: "Breads", slug: "breads", banner: "https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&q=80" },
+      { name: "Chinese Snacks", slug: "chinese-snacks", banner: "/attached_assets/stock_images/chinese_snacks.jpg" },
+      { name: "Noodles", slug: "noodles", banner: "/attached_assets/stock_images/noodles.jpg" },
+      { name: "Chinese Rice", slug: "chinese-rice", banner: "/attached_assets/stock_images/chinese_rice.jpg" },
+      { name: "Breads", slug: "breads", banner: "/attached_assets/stock_images/breads.jpg" },
     ];
 
     const insertedCats = await db.insert(categories).values(
