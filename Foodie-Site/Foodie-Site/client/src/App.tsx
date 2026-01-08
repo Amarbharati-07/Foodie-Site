@@ -46,7 +46,9 @@ function App() {
         <div className="flex flex-col min-h-screen bg-background text-foreground font-sans">
           <Navigation />
           <ScrollToTop />
-          <Router />
+          <main className="flex-grow">
+            <Router />
+          </main>
           <Footer />
           <Toaster />
         </div>
