@@ -5,14 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "../lib/utils";
 import { Search, ChefHat, SlidersHorizontal, Utensils, FileText } from "lucide-react";
 import { jsPDF } from "jspdf";
-import "jspdf-autotable";
-
-// Add type definition for jspdf-autotable
-declare module "jspdf" {
-  interface jsPDF {
-    autoTable: (options: any) => jsPDF;
-  }
-}
+import autoTable from "jspdf-autotable";
 
 export default function Menu() {
   const { data: categories, isLoading: catLoading } = useCategories();
@@ -68,7 +61,7 @@ export default function Menu() {
         `Rs. ${item.price}`
       ]);
 
-      doc.autoTable({
+      autoTable(doc, {
         startY: currentY,
         head: [["Item Name", "Description", "Price"]],
         body: tableData,
