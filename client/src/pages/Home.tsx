@@ -78,9 +78,11 @@ export default function Home() {
               muted
               loop
               playsInline
+              key="hero-video"
               className="w-full h-full object-cover"
             >
               <source src="/background-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
             </video>
           </motion.div>
 
