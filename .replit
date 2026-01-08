@@ -1,4 +1,4 @@
-modules = ["nodejs-20"]
+modules = ["nodejs-20", "python-3.11"]
 [nix]
 channel = "stable-25_05"
 packages = ["unzip"]
@@ -16,15 +16,15 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "Foodie Site Dev"
+args = "Foodie Site Static Preview"
 
 [[workflows.workflow]]
-name = "Foodie Site Dev"
+name = "Foodie Site Static Preview"
 author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cd Foodie-Site/Foodie-Site && npm run dev"
+args = "python3 -m http.server 5000 --directory Foodie-Site/Foodie-Site"
 waitForPort = 5000
 
 [workflows.workflow.metadata]
