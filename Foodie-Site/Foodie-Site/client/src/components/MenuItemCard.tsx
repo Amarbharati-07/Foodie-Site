@@ -42,6 +42,11 @@ export function MenuItemCard({ item }: MenuItemCardProps) {
             alt={item.name}
             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out"
             loading="lazy"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.onerror = null;
+              target.src = "/attached_assets/stock_images/fallback_dish.jpg";
+            }}
           />
           
           {/* Elegant Gradient Overlay */}
