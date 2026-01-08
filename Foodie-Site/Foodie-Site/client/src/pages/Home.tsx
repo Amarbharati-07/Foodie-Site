@@ -43,7 +43,7 @@ export default function Home() {
   useEffect(() => {
     if (!imagesPreloaded) return;
     const timer = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % HERO_IMAGES.length);
+      setCurrentImageIndex((prev) => (prev + 1) % (HERO_IMAGES.length + 1));
     }, 5000);
     return () => clearInterval(timer);
   }, [imagesPreloaded]);
@@ -58,6 +58,33 @@ export default function Home() {
         {/* Background Image Slideshow with Overlay */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/50 z-10 pointer-events-none" />
+          
+          {/* Video Background */}
+          <motion.div
+            initial={false}
+            animate={{ 
+              opacity: currentImageIndex === HERO_IMAGES.length ? 1 : 0,
+            }}
+            transition={{ 
+              opacity: { duration: 1.5, ease: "easeInOut" }
+            }}
+            className="absolute inset-0"
+            style={{
+              zIndex: currentImageIndex === HERO_IMAGES.length ? 1 : 0,
+            }}
+          >
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              <source src="/background-video.mp4" type="video/mp4" />
+            </video>
+          </motion.div>
+
+          {/* Image Slideshow */}
           {HERO_IMAGES.map((src, index) => (
             <motion.div
               key={src}
