@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { ArrowRight, Star, Clock, MapPin, Phone } from "lucide-react";
 import { useCategories } from "../hooks/use-restaurant";
 import { useState, useEffect } from "react";
+import heroVideo from "@assets/generated_videos/vegetarian_restaurant_with_delicious_food..mp4";
 
 const HERO_IMAGES = [
   "https://images.unsplash.com/photo-1517244683847-745431f57235?q=80&w=2000&auto=format&fit=crop",
@@ -80,7 +81,7 @@ export default function Home() {
               key="hero-video"
               className="w-full h-full object-cover"
             >
-              <source src="/background-video.mp4" type="video/mp4" />
+              <source src={heroVideo} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </motion.div>
