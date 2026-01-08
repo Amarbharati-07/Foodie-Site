@@ -267,7 +267,7 @@ export default function Home() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => {
-          const restaurantDetails = `Hello 👋\n\nThank you for contacting Shri Krishna Pure Vegetarian.\n\n🍽️ Restaurant Name: Shri Krishna Pure Vegetarian  \n📍 Address: Ambernath, Maharashtra, India  \n📞 Contact Number: +91 9372842906  \n📧 Email ID: shrikrishnapureveg@gmail.com  \n\n📄 Please find our complete food menu attached for your reference.\n\nWe look forward to serving you! 😊`;
+          const restaurantDetails = `Hello\n\nThank you for contacting Shri Krishna Pure Vegetarian.\n\nRestaurant Name: Shri Krishna Pure Vegetarian\nAddress: Ambernath, Maharashtra, India\nContact Number: +91 9372842906\nEmail ID: shrikrishnapureveg@gmail.com\n\nPlease find our complete food menu attached for your reference.\n\nWe look forward to serving you.`;
           const msg = encodeURIComponent(restaurantDetails);
           window.open(`https://wa.me/919372842906?text=${msg}`, '_blank');
         }}

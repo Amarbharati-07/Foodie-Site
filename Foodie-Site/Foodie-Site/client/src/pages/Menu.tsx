@@ -4,6 +4,15 @@ import { MenuItemCard } from "../components/MenuItemCard";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "../lib/utils";
 import { Search, ChefHat, SlidersHorizontal, Utensils, FileText } from "lucide-react";
+import { jsPDF } from "jspdf";
+import "jspdf-autotable";
+
+// Add type definition for jspdf-autotable
+declare module "jspdf" {
+  interface jsPDF {
+    autoTable: (options: any) => jsPDF;
+  }
+}
 
 export default function Menu() {
   const { data: categories, isLoading: catLoading } = useCategories();
@@ -12,6 +21,7 @@ export default function Menu() {
   const [viewedPdf, setViewedPdf] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   
+  const { data: allMenuItems } = useMenuItems();
   const { data: menuItems, isLoading: menuLoading } = useMenuItems(selectedCategoryId ? String(selectedCategoryId) : undefined);
 
   const isLoading = catLoading || menuLoading;
@@ -24,9 +34,54 @@ export default function Menu() {
   const activeCategory = categories?.find(c => c.id === selectedCategoryId);
 
   const handlePdfView = () => {
+    if (!categories || !allMenuItems) return;
+
+    const doc = new jsPDF();
+    const title = "Shri Krishna Pure Vegetarian - Menu";
+    
+    doc.setFontSize(20);
+    doc.text(title, 105, 15, { align: "center" });
+    
+    doc.setFontSize(10);
+    doc.text("Ambernath, Maharashtra, India", 105, 22, { align: "center" });
+    doc.text("Contact: +91 9372842906 | Email: shrikrishnapureveg@gmail.com", 105, 27, { align: "center" });
+
+    let currentY = 35;
+
+    categories.forEach((category) => {
+      const items = allMenuItems.filter(item => item.categoryId === category.id);
+      if (items.length === 0) return;
+
+      if (currentY > 250) {
+        doc.addPage();
+        currentY = 20;
+      }
+
+      doc.setFontSize(14);
+      doc.setFont("helvetica", "bold");
+      doc.text(category.name, 14, currentY);
+      currentY += 5;
+
+      const tableData = items.map(item => [
+        item.name,
+        item.description || "-",
+        `Rs. ${item.price}`
+      ]);
+
+      doc.autoTable({
+        startY: currentY,
+        head: [["Item Name", "Description", "Price"]],
+        body: tableData,
+        theme: "striped",
+        headStyles: { fillColor: [212, 163, 115] }, // primary color roughly
+        margin: { top: 20 },
+      });
+
+      currentY = (doc as any).lastAutoTable.finalY + 15;
+    });
+
+    doc.save("Shri-Krishna-Pure-Veg-Menu.pdf");
     setViewedPdf(true);
-    // Open mock PDF link
-    window.open("https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf", "_blank");
   };
 
   return (
@@ -190,7 +245,7 @@ export default function Menu() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => {
-          const restaurantDetails = `Hello 👋\n\nThank you for contacting Shri Krishna Pure Vegetarian.\n\n🍽️ Restaurant Name: Shri Krishna Pure Vegetarian  \n📍 Address: Ambernath, Maharashtra, India  \n📞 Contact Number: +91 9372842906  \n📧 Email ID: shrikrishnapureveg@gmail.com  \n\n📄 Please find our complete food menu attached for your reference.\n\nWe look forward to serving you! 😊`;
+          const restaurantDetails = `Hello\n\nThank you for contacting Shri Krishna Pure Vegetarian.\n\nRestaurant Name: Shri Krishna Pure Vegetarian\nAddress: Ambernath, Maharashtra, India\nContact Number: +91 9372842906\nEmail ID: shrikrishnapureveg@gmail.com\n\nPlease find our complete food menu attached for your reference.\n\nWe look forward to serving you.`;
           const msg = encodeURIComponent(restaurantDetails);
           window.open(`https://wa.me/919372842906?text=${msg}`, '_blank');
         }}
