@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 const HERO_IMAGES = [
   "https://images.unsplash.com/photo-1517244683847-745431f57235?q=80&w=2000&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1606491956689-2ea28c674675?q=80&w=2000&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=2000&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?q=80&w=2000&auto=format&fit=crop"
 ];
 
